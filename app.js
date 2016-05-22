@@ -25,7 +25,7 @@ $(document).ready(function(){
     var randThree = Math.floor((Math.random() * 75));
     var color = 'rgb('+ (140 + rand) + ','+ (140 + randTwo) + ','+ (140 + randThree) +')';
     var color_two = 'rgb('+ (200 + rand) + ','+ (200 + randTwo) + ','+ (200 + randThree) +')';
-    $('body').css("background-color", color);
+    $('body').css("background-color", color); // 'body'
     $('.quote').css("color", color);
   });
 
@@ -89,6 +89,26 @@ $(document).delegate('textarea', 'keydown', function(e) {
     $(this).get(0).selectionStart =
     $(this).get(0).selectionEnd = start + 1;
   }
+
 });
 
-
+  function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {
+      document.documentElement.requestFullScreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+  }

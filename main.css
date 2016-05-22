@@ -1,10 +1,30 @@
+/* CelticParser
+full screen http://stackoverflow.com/questions/18096378/full-screen-div-that-fits-browser-size
+*/
+html,body {
+  height:110%;
+  margin: -30px 0 0 0;
+}
+
+.full {
+  height: calc(110% - 50px);
+  min-height: calc(110% - 50px); / *for Mozilla */
+}
+
+html>body .full {
+  height:auto;
+}
+
+
 body {
   background-color: gray;
   transition:background-color 0.5s ease;
   margin: 0;
   padding: 0;
-  max-height: 100vh;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
+  background-size: cover;
 }
 
 header {
@@ -78,7 +98,7 @@ header {
 }
 
 .next, .next:hover {
-  color: white;
+  color: #707070;;
   font-weight: bold;
   font-size: 20px;
   position: absolute;
@@ -100,4 +120,10 @@ textarea {
   bottom: 60px;
   left: 30px;
   width: 90%;
+}
+
+input, input:hover {
+  color: #707070;
+  font-weight: bold;
+  font-size: 20px;
 }
