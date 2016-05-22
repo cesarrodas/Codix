@@ -32,8 +32,8 @@ $(document).ready(function(){
   function nextCard(cardHolder){
     var number = Math.floor(Math.random() * quotes.length);
     cardHolder.html("");
-    cardHolder.append("<code>" + quotes[number].quote + "</code>");
-    cardHolder.append("<textarea wrap='off' cols='60' rows='16'></textarea>");
+    cardHolder.append("<div  id='code'><code>" + quotes[number].quote + "</code></div>");
+    cardHolder.append("<textarea wrap='off' cols='60' rows='14'></textarea>");
     cardHolder.append("<button class='next'>Next</button>");
   };
 
