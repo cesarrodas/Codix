@@ -1,0 +1,103 @@
+body {
+  background-color: gray;
+  transition:background-color 0.5s ease;
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  text-align:center;
+}
+
+.title {
+  margin-top: 30px;
+  font-family: 'Quando', serif;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+#container {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.quote {
+  position: absolute;
+  width: 40%; /* 50%*/
+  height: 700px;
+  line-height: 32.5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 5px 5px 5px;
+  text-align: left;
+  border: 3px solid gray;
+  left: 50%; /* 50% */
+  top: 10px;
+  margin-left: -20%; /* -25*/
+  background-color: white;
+  border-radius: 30px;
+  color: gray;
+  padding-left: 20px;
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+  .quote {
+    left: 10%;
+    width: 90%;
+    margin-left: -5%;
+    font-size: 28px;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+
+}
+
+.quote1 {
+  left: -200%; /* -150%*/
+}
+.quote2 {
+}
+.quote3 {
+  left: 200%; /* 150%*/
+}
+
+.next, .next:hover {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.author {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+textarea {
+  resize: none;
+  font-size: 18px;
+  tab-size: 2;
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  width: 90%;
+}
