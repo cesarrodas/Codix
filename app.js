@@ -27,6 +27,7 @@ $(document).ready(function(){
     var color_two = 'rgb('+ (200 + rand) + ','+ (200 + randTwo) + ','+ (200 + randThree) +')';
     $('body').css("background-color", color); // 'body'
     $('.quote').css("color", color);
+    $('#descript').css("color", color);
   });
 
   function nextCard(cardHolder){
@@ -35,6 +36,9 @@ $(document).ready(function(){
     cardHolder.append("<div  id='code'><code>" + quotes[number].quote + "</code></div>");
     cardHolder.append("<textarea wrap='off' cols='60' rows='14'></textarea>");
     cardHolder.append("<button class='next'>Next</button>");
+
+    $('#descript').html("");
+    $('#descript').append("<div  id='describe'><code>" + quotes[number].author + "</code></div>");
   };
 
   $('.quote').on("click", ".next" ,function() {

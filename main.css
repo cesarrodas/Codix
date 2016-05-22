@@ -54,7 +54,7 @@ header {
   position: absolute;
   width: 40%; /* 50%*/
   height: 740px;
-  line-height: 32.5px;
+  line-height: 1.5em;
   font-size: 20px;
   font-weight: bold;
   padding: 20px 5px 5px 5px;
@@ -97,6 +97,18 @@ header {
   height: 300px;
 }
 
+#describe {
+  height: 350px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+#code {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
 textarea {
   resize: none;
   font-size: 18px;
@@ -111,4 +123,18 @@ input, input:hover {
   color: #707070;
   font-weight: bold;
   font-size: 20px;
+}
+
+#descript {
+  background-color: white;
+  border: 3px solid gray;
+  border-radius: 30px;
+  color: gray;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  height: 400px;
+  margin-left: 50px;
+  padding: 40px 20px 0 20px;
+  width: 400px;
 }
